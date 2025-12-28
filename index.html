@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BCA-HUB | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<body>
+<style>
+    *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f4f6ff;
+}
+
+/* Header */
+.header{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:60px;
+  background:#2b2eff;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+  z-index:1000;
+}
+
+.menu-btn{
+  font-size:24px;
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+/* Top Nav */
+.top-nav{
+  margin-top:60px;
+  display:flex;
+  overflow-x:auto;
+  background:#fff;
+  border-bottom:1px solid #ccc;
+}
+
+.top-nav a{
+  padding:12px 20px;
+  text-decoration:none;
+  color:#333;
+  white-space:nowrap;
+}
+
+.top-nav a:hover{
+  background:#2b2eff;
+  color:white;
+}
+
+/* Sidebar */
+#sidebar {
+  position: fixed;
+  left: -220px;
+  top: 60px;
+   background: #1e293b;
+  width: 220px;
+  height: 100%;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+/* OPEN STATE */
+#sidebar.active {
+  left: 0;
+}
+
+#sidebar a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #f1f5f9;
+  border-bottom: 1px solid #334155;
+}
+
+
+
+/* Main */
+.main{
+  padding:20px;
+  margin-top:20px;
+}
+
+/* Hero */
+.hero{
+  background:linear-gradient(to right,#2b2eff,#6a6dff);
+  color:white;
+  padding:40px;
+  border-radius:12px;
+  text-align:center;
+}
+
+/* Sections */
+.section{
+  margin-top:30px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.card:hover{
+  background:#2b2eff;
+  color:white;
+  transform:translateY(-5px);
+}
+
+/* Footer */
+.footer{
+  margin-top:40px;
+  background:#1e1e2f;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+
+
+
+/* ===== Main Container ===== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* Main Heading */
+.container > h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2b2eff;
+  font-size: 32px;
+}
+
+/* Section Heading */
+.container > h2 {
+  margin: 35px 0 15px;
+  color: #1e1e2f;
+  font-size: 22px;
+  border-left: 5px solid #2b2eff;
+  padding-left: 10px;
+}
+
+/* ===== Grid ===== */
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* ===== Card ===== */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2b2eff, #6a6dff);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover::before {
+  opacity: 0.1;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Text */
+.card h3,
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #2b2eff;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 12px;
+  }
+
+  .container > h1 {
+    font-size: 26px;
+  }
+
+  .container > h2 {
+    font-size: 20px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
+</style>
+<!-- Header -->
+<header class="header">
+  <h1>BCA-HUB</h1>
+<button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+</header>
+
+<!-- Top Scroll Menu -->
+<nav class="top-nav">
+  <a href="index.html">Home</a>
+  <a href="Editor1.html">Live HTML Editor</a>
+  <a href="https://amanovar.github.io/manohar/QR-Code-Generator.html">QR-Code-Generator</a>
+ <a href="https://amanovar.github.io/manohar/">🧮 Calculators</a>
+  <a href="https://amanovar.github.io/paper/">📄 Question Papers</a>
+  <a href="Notes-Maker.html">Whiteboard + Notes Maker</a>
+</nav>
+
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+ <a href="index.html">Home</a>
+  <a href="Editor1.html">Live HTML Editor</a>
+  <a href="https://amanovar.github.io/manohar/QR-Code-Generator.html">QR-Code-Generator</a>
+ <a href="https://amanovar.github.io/manohar/">🧮 Calculators</a>
+  <a href="https://amanovar.github.io/paper/">📄 Question Papers</a>
+  <a href="Notes-Maker.html">Whiteboard + Notes Maker</a>
+</aside>
+
+<!-- Main Content -->
+<main class="main">
+
+<!-- Hero Section -->
+<section class="hero">
+  <h2>Welcome to BCA-HUB</h2>
+  <p>All BCA Notes, Calculators & Question Papers in One Place</p>
+</section>
+
+
+
+
+<div class="container">
+  <h1>BCA-HUB – Question Papers & PDFs</h1>
+
+  <!-- ================= DBMS ================= -->
+  <h2>📘 DBMS PDFs</h2>
+  <div class="calculator-grid">
+    <div class="card" onclick="location.href='unit2.pdf'">
+      <h3>Unit-II DBMS</h3>
+      <p>Transactions & Concurrency Control</p>
+    </div>
+
+    <div class="card" onclick="location.href='unit3.pdf'">
+      <h3>Unit-III DBMS</h3>
+      <p>Transaction management concepts</p>
+    </div>
+
+    <div class="card" onclick="location.href='unit4.pdf'">
+      <h3>Unit-IV DBMS</h3>
+      <p>Database recovery & scheduling</p>
+    </div>
+
+    <div class="card" onclick="location.href='unit5.pdf'">
+      <h3>Unit-V DBMS</h3>
+      <p>EER & ER to relational mapping</p>
+    </div>
+
+    <div class="card" onclick="location.href='unit6.pdf'">
+      <h3>Unit-VI DBMS</h3>
+      <p>Advanced DBMS concepts</p>
+    </div>
+
+    <div class="card" onclick="location.href='image.pdf'">
+      <h3>DBMS Question Paper</h3>
+      <p>Previous year questions</p>
+    </div>
+  </div>
+
+  <!-- ================= JAVA ================= -->
+  <h2> Java PDFs</h2>
+  <div class="calculator-grid">
+    <div class="card" onclick="location.href='java networking.pdf'">
+      <h3>Java Networking</h3>
+      <p>Core networking concepts</p>
+    </div>
+
+    <div class="card" onclick="location.href='java server pages.pdf'">
+      <h3>JSP</h3>
+      <p>Java Server Pages (JEE)</p>
+    </div>
+
+    <div class="card" onclick="location.href='html_java[1].pdf'">
+      <h3>HTML – Unit IV</h3>
+      <p>Structure of web pages</p>
+    </div>
+
+    <div class="card" onclick="location.href='java aw.pdf'">
+      <h3>Java GUI</h3>
+      <p>AWT & Applet concepts</p>
+    </div>
+  </div>
+
+  <!-- ================= COMPUTER NETWORK ================= -->
+  <h2>🌐 Computer Network PDFs</h2>
+  <div class="calculator-grid">
+    <div class="card" onclick="location.href='computer2nd.pdf'">
+      <h3>Unit-II</h3>
+      <p>Transmission media & noise</p>
+    </div>
+
+    <div class="card" onclick="location.href='computer3rd.pdf'">
+      <h3>Unit-III</h3>
+      <p>Multiplexing & error detection</p>
+    </div>
+
+    <div class="card" onclick="location.href='computer4th.pdf'">
+      <h3>Unit-IV</h3>
+      <p>Routing & network layer</p>
+    </div>
+
+    <div class="card" onclick="location.href='computer5th.pdf'">
+      <h3>Unit-V</h3>
+      <p>Transport & OSI layers</p>
+    </div>
+
+    <div class="card" onclick="location.href='computer.pdf'">
+      <h3>Question Paper</h3>
+      <p>Previous year CN paper</p>
+    </div>
+  </div>
+
+  <!-- ================= NUMERICAL METHOD ================= -->
+  <h2>📐 Numerical Method PDFs</h2>
+  <div class="calculator-grid">
+    <div class="card" onclick="location.href='numerical3.pdf'">
+      <h3>Unit-III</h3>
+      <p>Differentiation & Integration</p>
+    </div>
+
+    <div class="card" onclick="location.href='numerical4.pdf'">
+      <h3>Unit-IV</h3>
+      <p>Linear equations</p>
+    </div>
+
+    <div class="card" onclick="location.href='numerical5.pdf'">
+      <h3>Unit-V</h3>
+      <p>Differential equations</p>
+    </div>
+
+    <div class="card" onclick="location.href='numerical-image.pdf'">
+      <h3>Question Paper 2023</h3>
+      <p>Numerical method</p>
+    </div>
+
+    <div class="card" onclick="location.href='numerical-imag.pdf'">
+      <h3>Question Paper 2024</h3>
+      <p>Numerical method</p>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2025 BCA-HUB | Designed for BCA Students</p>
+</footer>
+
+<script>
+ const sidebar = document.getElementById("sidebar");
+const menuBtn = document.querySelector(".menu-btn");
+
+/* Toggle sidebar */
+function toggleSidebar() {
+  sidebar.classList.toggle("active");
+}
+
+/* Click / touch outside → close sidebar */
+document.addEventListener("click", function (e) {
+  if (
+    !sidebar.contains(e.target) &&
+    !menuBtn.contains(e.target)
+  ) {
+    sidebar.classList.remove("active");
+  }
+});
+
+/* Mobile touch support */
+document.addEventListener("touchstart", function (e) {
+  if (
+    !sidebar.contains(e.target) &&
+    !menuBtn.contains(e.target)
+  ) {
+    sidebar.classList.remove("active");
+  }
+});
+
+
+
+
+
+
+</script>
+</body>
+</html>
