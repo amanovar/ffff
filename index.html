@@ -1,497 +1,607 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<!-- Basic -->
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="YmrHNxxYxy5iz_PDB1UWlR8RkD56xp3mhqASdwy1HLo" />
-<!-- Title -->
-<title>BCA-HUB | BCA Notes, DBMS PDF, Question Papers</title>
+<!-- SEO TITLE -->
+<title>BCA-HUB | BCA Notes, PDFs, Question Papers & Tutorials</title>
+<!-- META DESCRIPTION -->
+<meta name="description" content="BCA-HUB provides free BCA notes, PDF downloads, DBMS, CN, Java, Numerical Method question papers and easy computer science tutorials.">
 
-<!-- SEO -->
-<meta name="description" content="BCA-HUB provides BCA notes, DBMS PDFs, Java notes, Computer Network question papers and Numerical Method PDFs for all semesters.">
-<meta name="keywords" content="BCA notes, DBMS pdf, BCA question papers, Java notes, Computer Network pdf, Numerical Method BCA">
-<meta name="author" content="BCA-HUB">
-<meta name="robots" content="index, follow">
+<!-- KEYWORDS (optional but ok) -->
+<meta name="keywords" content="merge pdf, split pdf, compress pdf, pdf tools online, free pdf editor">
 
-<!-- Open Graph (Facebook / WhatsApp) -->
-<meta property="og:title" content="BCA-HUB | BCA Notes & Question Papers">
-<meta property="og:description" content="Download BCA notes, DBMS, Java, Computer Network and Numerical Method PDFs from BCA-HUB.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://amanovar.github.io/">
-<meta property="og:image" content="https://amanovar.github.io/og-image.jpg">
+<!-- AUTHOR -->
+<meta name="author" content="Experts PHP">
 
-<!-- Twitter -->
+<!-- CANONICAL URL -->
+<link rel="canonical" href="https://amanovar.github.io/" />
+
+
+<!-- OPEN GRAPH (Facebook / WhatsApp) -->
+<meta property="og:title" content="BCA-HUB – BCA Notes & PDFs">
+<meta property="og:description" content="Download BCA notes, PDFs, DBMS, CN, Java and previous year question papers for free.">
+<meta property="og:url" content="https://amanovar.github.io/bca-hub/">
+<meta property="og:image" content="https://amanovar.github.io/og-image.png">
+
+<!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BCA-HUB | BCA Notes & PDFs">
-<meta name="twitter:description" content="All BCA notes and question papers at one place – BCA-HUB.">
-<meta name="twitter:image" content="https://amanovar.github.io/og-image.jpg">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="..." crossorigin="anonymous">
+
 <style>
-    *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  * {
+  -webkit-tap-highlight-color: transparent;
 }
 
-body{
-  background:#f4f6ff;
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#f8fafc;color:#0f172a
+
 }
 
-/* Header */
+/* HEADER */
+header{background:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo{font-size:22px;font-weight:700;color:#e11d48}
+.nav-links a{margin:0 10px;text-decoration:none;color:#334155;font-weight:600}
+.auth a{margin-left:10px;text-decoration:none;font-weight:600}
+.login{color:#334155}
+.signup{background:#e11d48;color:#fff;padding:8px 14px;border-radius:6px}
+
+/* HERO */
+.hero{max-width:1200px;margin:60px auto 40px;padding:0 20px;text-align:center}
+.hero h1{font-size:34px;margin-bottom:14px}
+.hero p{color:#475569;max-width:800px;margin:auto;font-size:17px}
+
+/* CATEGORY BAR */
+.categories{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:40px 0}
+.categories button{border:none;padding:10px 16px;border-radius:20px;background:#e2e8f0;cursor:pointer;font-weight:600}
+.categories button.active{background:#e11d48;color:#fff}
+
+/* TOOLS GRID */
+.tools{max-width:1200px;margin:auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.tool{background:#fff;border-radius:12px;padding:22px;box-shadow:0 8px 20px rgba(0,0,0,.08);transition:.3s}
+.tool:hover{transform:translateY(-5px)}
+.tool h3{margin-bottom:10px}
+.tool p{font-size:14px;color:#475569}
+.badge{background:#22c55e;color:#fff;font-size:12px;padding:3px 8px;border-radius:20px;margin-left:6px}
+
+/* SECTIONS */
+.section{max-width:1200px;margin:80px auto;padding:0 20px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.section h2{font-size:28px;margin-bottom:10px}
+.section p{color:#475569}
+.section img{width:100%;border-radius:12px}
+
+/* PREMIUM */
+.premium{background:#0f172a;color:#fff;padding:60px 20px;text-align:center}
+.premium h2{font-size:30px}
+.premium p{max-width:700px;margin:15px auto;color:#cbd5f5}
+.premium a{display:inline-block;margin-top:20px;background:#e11d48;color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:700}
+
+/* FOOTER */
+footer{background:#020617;color:#cbd5e1;padding:40px 20px}
+.footer{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+footer h4{margin-bottom:10px;color:#fff}
+footer a{display:block;color:#cbd5e1;text-decoration:none;font-size:14px;margin:6px 0}
+.copy{text-align:center;margin-top:30px;font-size:14px;color:#94a3b8}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .section{grid-template-columns:1fr}
+}
+
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#f8fafc}
+
+/* HEADER */
 .header{
-  position:fixed;
-  top:0;
-  width:100%;
-  height:60px;
-  background:#2b2eff;
-  color:white;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  padding:0 20px;
+  gap:20px;
+  padding:14px 20px;
+  background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.logo{font-size:22px;font-weight:700;color:#e11d48}
+
+/* HAMBURGER */
+.hamburger{
+  display:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* DESKTOP MENU */
+.menu{display:flex;gap:18px}
+
+.menu-item{
+  position:relative;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.arrow{font-size:12px;transition:.3s}
+
+.sub{
+  position:absolute;
+  top:35px;
+  left:0;
+  background:#fff;
+  min-width:180px;
+  border-radius:8px;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+  display:none;
+}
+
+.sub a{
+  display:block;
+  padding:10px 14px;
+  text-decoration:none;
+  color:#0f172a;
+}
+
+.menu-item.active .sub{display:block}
+.menu-item.active .arrow{transform:rotate(180deg)}
+
+.auth a{margin-left:12px;text-decoration:none;font-weight:600}
+.btn{background:#e11d48;color:#fff;padding:8px 14px;border-radius:6px}
+
+/* SIDEBAR */
+.sidebar{
+  position:fixed;
+  top:0;left:-260px;
+  width:260px;height:100%;
+  background:#0f172a;
+  color:#fff;
+  transition:.3s;
   z-index:1000;
 }
 
-.menu-btn{
-  font-size:24px;
-  background:none;
-  border:none;
-  color:white;
-  cursor:pointer;
-}
+.sidebar.show{left:0}
 
-/* Top Nav */
-.top-nav{
-  margin-top:60px;
+.sidebar-header{
   display:flex;
-  overflow-x:auto;
-  background:#fff;
-  border-bottom:1px solid #ccc;
+  justify-content:space-between;
+  padding:14px;
+  font-weight:700;
+  background:#020617;
 }
 
-.top-nav a{
-  padding:12px 20px;
-  text-decoration:none;
-    
-  color:#333;
-  white-space:nowrap;
-}
-
-.top-nav a:hover{
-       background:#2b2eff;
-  color:white;
-}
-
-/* Sidebar */
-#sidebar {
-  position: fixed;
-  left: -220px;
-  top: 60px;
-   background: #1e293b;
-  width: 220px;
-  height: 100%;
-  transition: left 0.3s ease;
-  z-index: 1000;
-}
-/* OPEN STATE */
-#sidebar.active {
-  left: 0;
-}
-
-#sidebar a {
-  display: block;
-  padding: 12px 20px;
-  text-decoration: none;
-  color: #f1f5f9;
-  border-bottom: 1px solid #334155;
-}
-
-
-
-/* Main */
-.main{
-  padding:20px;
-  margin-top:20px;
-}
-
-/* Hero */
-.hero{
-  background:linear-gradient(to right,#2b2eff,#6a6dff);
-  color:white;
-  padding:40px;
-  border-radius:12px;
-  text-align:center;
-}
-
-/* Sections */
-.section{
-  margin-top:30px;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:15px;
-  margin-top:15px;
-}
-
-.card{
-  background:white;
-  padding:20px;
-  border-radius:10px;
-  text-align:center;
+.side-item{
+  padding:14px;
+  border-bottom:1px solid rgba(255,255,255,.1);
   cursor:pointer;
-  transition:0.3s;
 }
 
-.card:hover{
-  
-  color:white;
-  transform:translateY(-5px);
+.side-item span{float:right}
+
+.side-sub{
+  display:none;
+  padding-left:10px;
 }
 
-/* Footer */
-.footer{
-  margin-top:40px;
-  background:#1e1e2f;
-  color:white;
-  text-align:center;
-  padding:15px;
+.side-sub a{
+  display:block;
+  padding:8px 0;
+  color:#cbd5f5;
+  text-decoration:none;
+}
+
+/* OVERLAY */
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  display:none;
+  z-index:999;
+}
+.overlay.show{display:block}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .desktop-menu{display:none}
+  .hamburger{display:block}
+}
+
+/* desktop menu visible only on laptop */
+@media(min-width:769px){
+  .desktop-menu{display:flex}
+}
+
+/* mobile only */
+@media(max-width:768px){
+  .desktop-menu{display:none}
 }
 
 
-
-/* ===== Main Container ===== */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 30px 20px;
+/* TOP FIXED HORIZONTAL SCROLLBAR */
+.top-scrollbar{
+  position: sticky;
+  top: 60px; /* header ki height ke hisab se */
+  z-index: 99;
+  background: #020617;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
 }
 
-/* Main Heading */
-.container > h1 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #2b2eff;
-  font-size: 32px;
+.top-scrollbar a{
+  display: inline-block;
+  color: #e5e7eb;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 400;
 }
-
-/* Section Heading */
-.container > h2 {
-  margin: 35px 0 15px;
-  color: #1e1e2f;
-  font-size: 22px;
-  border-left: 5px solid #2b2eff;
-  padding-left: 10px;
-}
-
-/* ===== Grid ===== */
-.calculator-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-    a{
+a {
   text-decoration: none;
 }
 
-/* ===== Card ===== */
-.card {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-  position: relative;
-  overflow: hidden;
+.top-scrollbar a:hover{
+  background: #1e293b;
+  border-radius: 6px;
 }
 
-/* Hover Effect */
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
- 
-  opacity: 0;
-  transition: 0.3s;
+/* scrollbar style */
+.top-scrollbar::-webkit-scrollbar{
+  height: 5px;
+}
+.top-scrollbar::-webkit-scrollbar-thumb{
+  background: #e11d48;
+  border-radius: 10px;
 }
 
-
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+h2{
+  text-align: center;
+}
+h3{
+  color: #334155;
 }
 
-/* Card Text */
-.card h3,
-.card h2 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  color: #2b2eff;
-}
-
-.card p {
-  font-size: 14px;
-  color: #555;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .container {
-    padding: 20px 12px;
-  }
-
-  .container > h1 {
-    font-size: 26px;
-  }
-
-  .container > h2 {
-    font-size: 20px;
-  }
-
-  .card {
-    padding: 16px;
-  }
-}
 </style>
-<!-- Header -->
+</head>
+<body>
 <header class="header">
-  <h1>BCA-HUB</h1>
-<button class="menu-btn" onclick="toggleSidebar()">☰</button>
+  <!-- MOBILE MENU BUTTON -->
+  <div class="hamburger" onclick="openSidebar()">☰</div>
 
+  <div class="logo">BCA-HUB</div>
+
+  <!-- DESKTOP MENU -->
+  <nav class="menu desktop-menu">
+    <div class="menu-item">
+      <span class="title">c language <span class="arrow">▼</span></span>
+      <div class="sub">
+        <a href="#">c array</a>
+        <a href="#">c pointer</a>
+        <a href="#">c function</a>
+
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <span class="title">Split PDF <span class="arrow">▼</span></span>
+      <div class="sub">
+        <a href="#">Split pages</a>
+        <a href="#">Extract pages</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <span class="title">Compress PDF <span class="arrow">▼</span></span>
+      <div class="sub">
+        <a href="#">High compression</a>
+        <a href="#">Low compression</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--<div class="auth desktop-menu">
+    <a href="#">Login</a>
+    <a class="btn" href="#">Sign up</a>
+  </div>-->
 </header>
 
-<!-- Top Scroll Menu -->
-<nav class="top-nav">
-  <a href="index.html">Home</a>
-  <a href="Editor1.html">Live HTML Editor</a>
-  <a href="https://amanovar.github.io/manohar/QR-Code-Generator.html">QR-Code-Generator</a>
- <a href="https://amanovar.github.io/manohar/">🧮 Calculators</a>
-  <a href="https://amanovar.github.io/paper/">📄 Question Papers</a>
-  <a href="Notes-Maker.html">Whiteboard + Notes Maker</a>
-</nav>
+<!-- MOBILE SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <span>Menu</span>
+    <span class="close" onclick="closeSidebar()">✖</span>
+  </div>
 
-<!-- Sidebar -->
-<aside class="sidebar" id="sidebar">
- <a href="index.html">Home</a>
-  <a href="Editor1.html">Live HTML Editor</a>
-  <a href="https://amanovar.github.io/manohar/QR-Code-Generator.html">QR-Code-Generator</a>
- <a href="https://amanovar.github.io/manohar/"> Calculators</a>
-  <a href="https://amanovar.github.io/paper/"> Question Papers</a>
-  <a href="Notes-Maker.html">Whiteboard + Notes Maker</a>
-</aside>
+  <div class="side-item" onclick="toggleSide(this)">
+    Merge PDF <span>▶</span>
+    <div class="side-sub">
+      <a href="#">Merge 2 PDFs</a>
+      <a href="#">Merge Multiple PDFs</a>
+    </div>
+  </div>
 
-<!-- Main Content -->
-<main class="main">
+  <div class="side-item" onclick="toggleSide(this)">
+    Split PDF <span>▶</span>
+    <div class="side-sub">
+      <a href="#">Split pages</a>
+      <a href="#">Extract pages</a>
+    </div>
+  </div>
 
-<!-- Hero Section -->
-<section class="hero">
-  <h2>Welcome to BCA-HUB</h2>
-  <p>All BCA Notes, Calculators & Question Papers in One Place</p>
+  <div class="side-item" onclick="toggleSide(this)">
+    Compress PDF <span>▶</span>
+    <div class="side-sub">
+      <a href="#">High compression</a>
+      <a href="#">Low compression</a>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+
+<!-- TOP HORIZONTAL SCROLL BAR -->
+<div class="top-scrollbar">
+  <a href="#">HTML</a>
+  <a href="#">CSS</a>
+  <a href="#">JavaScript</a>
+  <a href="#">C</a>
+  <a href="#">C++</a>
+  <a href="#">Java</a>
+  <a href="#">DBMS</a>
+  <a href="#">OS</a>
+  <a href="#">CN</a>
+  <a href="#">Maths</a>
+</div>
+
+<!--<header>
+  <div class="nav">
+    <div class="logo">iLovePDF</div>
+    <div class="nav-links">
+      <a href="#">Merge PDF</a>
+      <a href="#">Split PDF</a>
+      <a href="#">Compress PDF</a>
+      <a href="#">Convert PDF</a>
+      <a href="#">All PDF tools</a>
+    </div>
+    <div class="auth">
+      <a href="#" class="login">Login</a>
+      <a href="#" class="signup">Sign up</a>
+    </div>
+  </div>
+</header>-->
+
+<!-- ================= BCA TUTORIAL SECTION ================= -->
+<section class="section" id="bca-tutorials">
+  <div>
+    <h2>BCA Tutorials – Learn Computer Science</h2>
+    <p>
+      BCA-HUB provides complete tutorials for BCA students including
+      C Programming, Data Structures, DBMS, Operating System, Computer
+      Networks, HTML, CSS and JavaScript with easy explanations.
+    </p>
+  </div>
+  <img src="https://dummyimage.com/600x400/e0e7ff/000000&text=BCA+Tutorials" 
+       alt="BCA Tutorials for Computer Science Students">
+</section>
+<h2>BCA-HUB – BCA Notes & Question Papers</h2>
+
+  <h2>DBMS Notes & Question Papers (BCA)</h2>
+<section class="tools">
+
+  
+    <a href="unit2.pdf" class="tool" target="_blank">
+      <h3>Unit-II DBMS PDF</h3>
+      <p>DBMS Unit-II covers transactions, ACID properties and concurrency control.</p>
+    </a>
+
+    <a href="unit3.pdf" class="tool" target="_blank">
+      <h3>Unit-III DBMS PDF</h3>
+      <p>DBMS Unit-III explains transaction management and recovery techniques.</p>
+    </a>
+
+    <a href="unit4.pdf" class="tool" target="_blank">
+      <h3>Unit-IV DBMS PDF</h3>
+      <p>Database recovery, scheduling and failure handling concepts.</p>
+    </a>
+
+    <a href="unit5.pdf" class="tool" target="_blank">
+      <h3>Unit-V DBMS PDF</h3>
+      <p>EER model and ER to relational mapping for BCA students.</p>
+    </a>
+
+    <a href="unit6.pdf" class="tool" target="_blank">
+      <h3>Unit-VI DBMS PDF</h3>
+      <p>Advanced DBMS concepts and distributed databases.</p>
+    </a>
+
+    <a href="dbms-question-paper.pdf" class="tool" target="_blank">
+      <h3>DBMS Question Paper</h3>
+      <p>Previous year DBMS question papers for BCA exam preparation.</p>
+    </a>
+ </section>
+<br>
+<br>
+ <h2>Java Programming Notes & PDFs</h2>
+<section class="tools">
+
+  <a href="java-networking.pdf" class="tool" target="_blank">
+    <h3>Java Networking PDF</h3>
+    <p>Core Java networking concepts, sockets and protocols.</p>
+  </a>
+
+  <a href="java-server-pages.pdf" class="tool" target="_blank">
+    <h3>Java Server Pages (JSP)</h3>
+    <p>JSP basics, lifecycle and Java EE concepts.</p>
+  </a>
+
+  <a href="HTML_JAVA[1].pdf" class="tool" target="_blank">
+    <h3>HTML Unit-IV PDF</h3>
+    <p>HTML structure, tags and web page design fundamentals.</p>
+  </a>
+
+  <a href="java-gui.pdf" class="tool" target="_blank">
+    <h3>Java GUI Programming</h3>
+    <p>AWT, Applets and GUI based Java programs.</p>
+  </a>
+
+</section>
+<br>
+<br>
+  <h2>Computer Network Notes & Question Papers</h2>
+<section class="tools">
+
+  <a href="computer-unit2.pdf" class="tool" target="_blank">
+    <h3>CN Unit-II PDF</h3>
+    <p>Transmission media, noise, attenuation and throughput.</p>
+  </a>
+
+  <a href="computer-unit3.pdf" class="tool" target="_blank">
+    <h3>CN Unit-III PDF</h3>
+    <p>Multiplexing techniques and error detection methods.</p>
+  </a>
+
+  <a href="Computer4th.pdf" class="tool" target="_blank">
+    <h3>CN Unit-IV PDF</h3>
+    <p>Routing algorithms and network layer design.</p>
+  </a>
+
+  <a href="computer-unit5.pdf" class="tool" target="_blank">
+    <h3>CN Unit-V PDF</h3>
+    <p>Transport layer and OSI upper layers.</p>
+  </a>
+
+  <a href="computer-network-question-paper.pdf" class="tool" target="_blank">
+    <h3>Computer Network Question Paper</h3>
+    <p>Previous year computer network question papers.</p>
+  </a>
+
+</section>
+<br>
+<br>
+<h2>Numerical Method Notes & Question Papers</h2>
+<section class="tools">
+
+  <a href="numerical3.pdf" class="tool" target="_blank">
+    <h3>Numerical Method Unit-III</h3>
+    <p>Numerical differentiation and integration techniques.</p>
+  </a>
+
+  <a href="numerical-unit4.pdf" class="tool" target="_blank">
+    <h3>Numerical Method Unit-IV</h3>
+    <p>Solution of linear equations.</p>
+  </a>
+
+  <a href="numerical-unit5.pdf" class="tool" target="_blank">
+    <h3>Numerical Method Unit-V</h3>
+    <p>Solution of differential equations.</p>
+  </a>
+
+  <a href="numerical-question-paper-2023.pdf" class="tool" target="_blank">
+    <h3>Numerical Method Question Paper 2023</h3>
+    <p>BCA numerical method previous year paper.</p>
+  </a>
+
+  <a href="numerical-question-paper-2024.pdf" class="tool" target="_blank">
+    <h3>Numerical Method Question Paper 2024</h3>
+    <p>Latest numerical method question paper.</p>
+  </a>
+
+</section>
+
+
+<section class="section">
+  <div>
+    <h2>Work your way</h2>
+    <p>Work offline with Desktop, manage documents locally, no internet and no limits.</p>
+  </div>
+  <img src="https://dummyimage.com/600x400/e5e7eb/000000&text=Desktop+App" alt="">
+</section>
+
+<section class="premium">
+  <h2>Get more with Premium</h2>
+  <p>Get full access to iLovePDF, advanced OCR, secure e-Signatures and custom workflows.</p>
+  <a href="#">Get Premium</a>
 </section>
 
 
 
 
-<div class="container">
-  <h1>BCA-HUB – BCA Notes & Question Papers</h1>
-
-  <h2>DBMS Notes & Question Papers (BCA)</h2>
-  <div class="calculator-grid">
-
-    <a href="unit2.pdf" class="card" target="_blank">
-      <h3>Unit-II DBMS PDF</h3>
-      <p>DBMS Unit-II covers transactions, ACID properties and concurrency control.</p>
-    </a>
-
-    <a href="unit3.pdf" class="card" target="_blank">
-      <h3>Unit-III DBMS PDF</h3>
-      <p>DBMS Unit-III explains transaction management and recovery techniques.</p>
-    </a>
-
-    <a href="unit4.pdf" class="card" target="_blank">
-      <h3>Unit-IV DBMS PDF</h3>
-      <p>Database recovery, scheduling and failure handling concepts.</p>
-    </a>
-
-    <a href="unit5.pdf" class="card" target="_blank">
-      <h3>Unit-V DBMS PDF</h3>
-      <p>EER model and ER to relational mapping for BCA students.</p>
-    </a>
-
-    <a href="unit6.pdf" class="card" target="_blank">
-      <h3>Unit-VI DBMS PDF</h3>
-      <p>Advanced DBMS concepts and distributed databases.</p>
-    </a>
-
-    <a href="dbms-question-paper.pdf" class="card" target="_blank">
-      <h3>DBMS Question Paper</h3>
-      <p>Previous year DBMS question papers for BCA exam preparation.</p>
-    </a>
-
+<footer>
+  <div class="footer">
+    <div><h4>Product</h4><a href="#">Home</a><a href="#">Features</a><a href="#">Pricing</a></div>
+    <div><h4>Company</h4><a href="#">About</a><a href="#">Contact</a><a href="#">Blog</a></div>
+    <div><h4>Solutions</h4><a href="#">Business</a><a href="#">Education</a><a href="#">Legal</a></div>
+    <div><h4>Apps</h4><a href="#">Desktop</a><a href="#">Mobile</a><a href="#">API</a></div>
   </div>
-</div>
-
- <h2>Java Programming Notes & PDFs</h2>
-<div class="calculator-grid">
-
-  <a href="Java Networking.pdf" class="card" target="_blank">
-    <h3>Java Networking PDF</h3>
-    <p>Core Java networking concepts, sockets and protocols.</p>
-  </a>
-
-  <a href="Java Server Pages.pdf" class="card" target="_blank">
-    <h3>Java Server Pages (JSP)</h3>
-    <p>JSP basics, lifecycle and Java EE concepts.</p>
-  </a>
-
-  <a href="HTML-unit-4.pdf" class="card" target="_blank">
-    <h3>HTML Unit-IV PDF</h3>
-    <p>HTML structure, tags and web page design fundamentals.</p>
-  </a>
-
-  <a href="Java AW.pdf" class="card" target="_blank">
-    <h3>Java GUI Programming</h3>
-    <p>AWT, Applets and GUI based Java programs.</p>
-  </a>
-
-</div>
-
-  <h2>Computer Network Notes & Question Papers</h2>
-<div class="calculator-grid">
-
-  <a href="computer2nd.pdf" class="card" target="_blank">
-    <h3>CN Unit-II PDF</h3>
-    <p>Transmission media, noise, attenuation and throughput.</p>
-  </a>
-
-  <a href="computer3rd.pdf" class="card" target="_blank">
-    <h3>CN Unit-III PDF</h3>
-    <p>Multiplexing techniques and error detection methods.</p>
-  </a>
-
-  <a href="Computer4th.pdf" class="card" target="_blank">
-    <h3>CN Unit-IV PDF</h3>
-    <p>Routing algorithms and network layer design.</p>
-  </a>
-    
-<a href="computer4th.pdf" class="card" target="_blank">
-    <h3>CN Unit-V PDF</h3>
-    <p>Transport layer and OSI upper layers.</p>
-  </a>
-
-    
-  <a href="computer5th.pdf" class="card" target="_blank">
-    <h3>CN Unit-V PDF</h3>
-    <p>Transport layer and OSI upper layers.</p>
-  </a>
-
-  
-
-    <a href="compure-image.pdf" class="card" target="_blank">
-    <h3>Computer Network Question Paper</h3>
-    <p>Previous year computer network question papers.</p>
-  </a>
-</div>
-
-<h2>Numerical Method Notes & Question Papers</h2>
-<div class="calculator-grid">
-
-  <a href="numerical3.pdf" class="card" target="_blank">
-    <h3>Numerical Method Unit-III</h3>
-    <p>Numerical differentiation and integration techniques.</p>
-  </a>
-
-  <a href="numerical4.pdf" class="card" target="_blank">
-    <h3>Numerical Method Unit-IV</h3>
-    <p>Solution of linear equations.</p>
-  </a>
-
-  <a href="numerical5.pdf" class="card" target="_blank">
-    <h3>Numerical Method Unit-V</h3>
-    <p>Solution of differential equations.</p>
-  </a>
-
-  <a href="numerical-image.pdf" class="card" target="_blank">
-    <h3>Numerical Method Question Paper 2023</h3>
-    <p>BCA numerical method previous year paper.</p>
-  </a>
-
-  <a href="numerical-imag.pdf" class="card" target="_blank">
-    <h3>Numerical Method Question Paper 2024</h3>
-    <p>Latest numerical method question paper.</p>
-  </a>
-
-</div>
-
-
-</main>
-
-<!-- Footer -->
-<footer class="footer">
-  <p>© 2025 BCA-HUB | Designed for BCA Students</p>
+  <div class="copy">© 2025 PDF Tools – Your PDF Editor</div>
 </footer>
 
-<script>
- const sidebar = document.getElementById("sidebar");
-const menuBtn = document.querySelector(".menu-btn");
 
-/* Toggle sidebar */
-function toggleSidebar() {
-  sidebar.classList.toggle("active");
+<script>
+
+
+// ===== MOBILE SIDEBAR =====
+function openSidebar(){
+  document.getElementById("sidebar").classList.add("show");
+  document.getElementById("overlay").classList.add("show");
 }
 
-/* Click / touch outside → close sidebar */
-document.addEventListener("click", function (e) {
-  if (
-    !sidebar.contains(e.target) &&
-    !menuBtn.contains(e.target)
-  ) {
-    sidebar.classList.remove("active");
-  }
+function closeSidebar(){
+  document.getElementById("sidebar").classList.remove("show");
+  document.getElementById("overlay").classList.remove("show");
+}
+
+function toggleSide(item){
+  const sub = item.querySelector(".side-sub");
+  sub.style.display = sub.style.display === "block" ? "none" : "block";
+}
+
+
+
+// Desktop menu hover open/close
+document.querySelectorAll(".desktop-menu .menu-item").forEach(item => {
+  let timer;
+
+  // Mouse enter → open menu
+  item.addEventListener("mouseenter", () => {
+    clearTimeout(timer);        // agar leave ke timer chal raha ho to cancel
+    item.classList.add("active"); // add active class → show dropdown
+  });
+
+  // Mouse leave → auto close after short delay
+  item.addEventListener("mouseleave", () => {
+    timer = setTimeout(() => {
+      item.classList.remove("active"); // remove active class → hide dropdown
+    }, 200); // 200ms delay for smooth experience
+  });
 });
 
-/* Mobile touch support */
-document.addEventListener("touchstart", function (e) {
-  if (
-    !sidebar.contains(e.target) &&
-    !menuBtn.contains(e.target)
-  ) {
-    sidebar.classList.remove("active");
-  }
+
+
+//like//
+const buttons = document.querySelectorAll(".categories button");
+const contents = document.querySelectorAll(".category-content");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    // Remove active from all buttons
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    // Hide all contents
+    contents.forEach(c => c.classList.remove("active"));
+
+    // Show target content
+    const targetId = btn.getAttribute("data-target");
+    document.getElementById(targetId).classList.add("active");
+  });
 });
-
-
-
-
-
 
 </script>
+
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
